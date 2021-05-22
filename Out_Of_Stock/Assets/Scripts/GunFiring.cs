@@ -15,4 +15,9 @@ public class GunFiring : MonoBehaviour
     {
         
     }
+
+    public void Fire()
+    {
+        Debug.Log("Blam!");
+    }
 }
