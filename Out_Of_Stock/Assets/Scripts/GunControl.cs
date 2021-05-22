@@ -7,6 +7,8 @@ public class GunControl : MonoBehaviour
     public Camera cam;
     public GameObject gun;
     private GunFiring gunFiring;
+    private Vector2 direction;
+    private Vector3 mouseWorldPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,11 @@ public class GunControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        gun.transform.LookAt(cam.ScreenToWorldPoint(Input.mousePosition));
+        mouseWorldPosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        direction = new Vector2(
+            mouseWorldPosition.x - transform.position.x,
+            mouseWorldPosition.y - transform.position.y
+            );
+        transform.right = direction;
     }
 }
