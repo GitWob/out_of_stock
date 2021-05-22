@@ -6,7 +6,7 @@ public class GunControl : MonoBehaviour
 {
     public Camera cam;
     public GameObject gun;
-    public GunFiring gunFiring;
+    private GunFiring gunFiring;
 
     // Start is called before the first frame update
     void Start()

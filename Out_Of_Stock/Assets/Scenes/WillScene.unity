@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 1927863}
   - component: {fileID: 1927862}
   - component: {fileID: 1927865}
+  - component: {fileID: 1927866}
+  - component: {fileID: 1927867}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -265,6 +267,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!114 &1927866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64762cb2b6564c64ba69408404d4c791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1447771776}
+  gun: {fileID: 1927860}
+  gunFiring: {fileID: 0}
+--- !u!114 &1927867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5140bd5ca30b9e9448f3736d5b798cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &399078026
 GameObject:
   m_ObjectHideFlags: 0
