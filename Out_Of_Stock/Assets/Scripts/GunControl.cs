@@ -30,7 +30,7 @@ public class GunControl : MonoBehaviour
         mouseWorldPosition = cam.ScreenToWorldPoint(Input.mousePosition);
 
         // firing angle calculations from vector between player and mouse
-        direction = (mouseWorldPosition - gun.transform.position).normalized;
+        direction = ((Vector2)mouseWorldPosition - (Vector2)gun.transform.position).normalized;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         //kickVector.x = Mathf.Cos(angle);
         //kickVector.y = Mathf.Sin(angle);
@@ -61,9 +61,10 @@ public class GunControl : MonoBehaviour
 
     void Fire()
     {
-        Debug.Log(kickVector.x);
-        Debug.Log(kickVector.y);
-
-        GetComponent<Rigidbody2D>().AddForce(kickVector);
+        Debug.Log("X: " + kickVector.x);
+        Debug.Log("Y: " + kickVector.y);
+        //Debug.DrawLine(transform.position, transform.position + (Vector3)kickVector);
+        Debug.DrawRay(transform.position, kickVector, Color.cyan, 1);
+        GetComponent<Rigidbody2D>().AddForce(kickVector, ForceMode2D.Impulse);
     }
 }
