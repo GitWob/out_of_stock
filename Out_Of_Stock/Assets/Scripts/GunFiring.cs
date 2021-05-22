@@ -16,7 +16,8 @@ public class GunFiring : MonoBehaviour
         parentTransform = gameObject.GetComponentInParent<Transform>();
         parentRigidbody = gameObject.GetComponentInParent<Rigidbody2D>();
         gunControl = gameObject.GetComponentInParent<GunControl>();
-        kickVector = (transform.right * -1) * recoilForce;
+        kickVector.x = Mathf.Cos(gunControl.angle);
+        kickVector.y = Mathf.Sin(gunControl.angle);
     }
 
     // Update is called once per frame
@@ -27,7 +28,8 @@ public class GunFiring : MonoBehaviour
 
     public void Fire()
     {
-        Debug.Log("Blam!");
+        Debug.Log(kickVector.x);
+        Debug.Log(kickVector.y);
 
         parentRigidbody.AddForce(kickVector);
     }

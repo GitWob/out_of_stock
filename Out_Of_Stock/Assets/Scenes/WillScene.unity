@@ -282,6 +282,9 @@ MonoBehaviour:
   cam: {fileID: 1447771776}
   gun: {fileID: 1580426055}
   fireRate: 0.2
+  angle: 0
+  direction: {x: 0, y: 0}
+  recoilForce: 50
 --- !u!1 &399078026
 GameObject:
   m_ObjectHideFlags: 0

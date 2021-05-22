@@ -9,9 +9,11 @@ public class GunControl : MonoBehaviour
     public float fireRate;
     public float angle;
     public Vector2 direction;
+    public float recoilForce;
     private GunFiring gunFiring;
     private Vector3 mouseWorldPosition;
     private float shotTimer;
+    private Vector2 kickVector;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +29,12 @@ public class GunControl : MonoBehaviour
         // gets the position of the mouse
         mouseWorldPosition = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        // finds the angle the gun should be facing if it starts at the gun's position and looks at the mouse
+        // firing angle calculations from vector between player and mouse
         direction = (mouseWorldPosition - gun.transform.position).normalized;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //kickVector.x = Mathf.Cos(angle);
+        //kickVector.y = Mathf.Sin(angle);
+        kickVector = direction * -1 * recoilForce;
 
         FaceMouse();
 
@@ -38,7 +43,7 @@ public class GunControl : MonoBehaviour
         {
             if (shotTimer > fireRate)
             {
-                gunFiring.Fire();
+                Fire();
                 shotTimer = 0;
             }
         }
@@ -52,5 +57,13 @@ public class GunControl : MonoBehaviour
     void FaceMouse()
     {
         gun.transform.eulerAngles = new Vector3(0, 0, angle);
+    }
+
+    void Fire()
+    {
+        Debug.Log(kickVector.x);
+        Debug.Log(kickVector.y);
+
+        GetComponent<Rigidbody2D>().AddForce(kickVector);
     }
 }
