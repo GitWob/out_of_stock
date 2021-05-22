@@ -25,6 +25,6 @@ public class GunControl : MonoBehaviour
             mouseWorldPosition.x - transform.position.x,
             mouseWorldPosition.y - transform.position.y
             );
-        transform.right = direction;
+        gun.transform.right = direction;
     }
 }
