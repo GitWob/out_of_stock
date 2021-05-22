@@ -21,10 +21,12 @@ public class GunControl : MonoBehaviour
     void Update()
     {
         mouseWorldPosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        direction = new Vector2(
-            mouseWorldPosition.x - transform.position.x,
-            mouseWorldPosition.y - transform.position.y
-            );
+        direction = mouseWorldPosition - gun.transform.position;
+        FaceMouse();
+    }
+
+    void FaceMouse()
+    {
         gun.transform.right = direction;
     }
 }
