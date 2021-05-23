@@ -5,6 +5,9 @@ using UnityEngine;
 public class GunFiring : MonoBehaviour
 {
     public float recoilForce;
+    public GameObject bullet;
+    public float bulletSpeed;
+    public Transform shootPoint;
     GunControl gunControl;
     Transform parentTransform;
     Rigidbody2D parentRigidbody;
@@ -28,9 +31,13 @@ public class GunFiring : MonoBehaviour
 
     public void Fire()
     {
+      
         Debug.Log(kickVector.x);
         Debug.Log(kickVector.y);
 
         parentRigidbody.AddForce(kickVector);
+
+
+        
     }
 }

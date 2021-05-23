@@ -15,6 +15,11 @@ public class GunControl : MonoBehaviour
     private float shotTimer;
     private Vector2 kickVector;
 
+    // bullet shooty stuff 
+    public GameObject bullet;
+    public float bulletSpeed;
+    public Transform shootPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +40,7 @@ public class GunControl : MonoBehaviour
         //kickVector.x = Mathf.Cos(angle);
         //kickVector.y = Mathf.Sin(angle);
         kickVector = direction * -1 * recoilForce;
+
 
         FaceMouse();
 
@@ -67,5 +73,8 @@ public class GunControl : MonoBehaviour
         Debug.DrawRay(transform.position, kickVector, Color.cyan, 1);
         GetComponent<Rigidbody2D>().AddForce(kickVector, ForceMode2D.Impulse);
         ShotScreenShake.Instance.CamShake(3.5f, 0.1f);
+
+        GameObject bulletins = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+        bulletins.GetComponent<Rigidbody2D>().AddForce(bulletins.transform.right * bulletSpeed);
     }
 }
