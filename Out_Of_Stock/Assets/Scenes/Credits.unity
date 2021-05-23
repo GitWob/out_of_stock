@@ -1156,8 +1156,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Music: Brian \nArt: Will\nScripting: Megan, Max, Will \nThanks to Vigorousjammer
-    on Deviantart for the supermarket background"
+  m_Text: "Music: Brian \nArt: Will\nScripting: Megan, Max, Will \n\nThanks to Vigorousjammer
+    on Deviantart for the supermarket background!"
 --- !u!222 &2145771499
 CanvasRenderer:
   m_ObjectHideFlags: 0
