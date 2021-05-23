@@ -14,7 +14,7 @@ public class GunControl : MonoBehaviour
     private Vector3 mouseWorldPosition;
     private float shotTimer;
     private Vector2 kickVector;
-
+    float lifeTime = 1.0f; 
     // bullet shooty stuff 
     public GameObject bullet;
     public float bulletSpeed;
@@ -94,13 +94,14 @@ public class GunControl : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(kickVector, ForceMode2D.Impulse);
         GameObject bulletins = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
         bulletins.GetComponent<Rigidbody2D>().AddForce(bulletins.transform.right * bulletSpeed);
-
-        //ShotScreenShake.Instance.CamShake(3.5f, 0.1f);
+        Destroy(bulletins, lifeTime);
+        ShotScreenShake.Instance.CamShake(4.5f, 0.1f);
     }
 
     void shellRelease()
     {
         GameObject shellIns = Instantiate(shell, shellPoint.position, shellPoint.rotation);
         shellIns.GetComponent<Rigidbody2D>().AddForce(shellIns.transform.up * shellSpeed);
+        Destroy(shellIns, lifeTime);
     }
 }
