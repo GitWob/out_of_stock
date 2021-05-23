@@ -20,8 +20,8 @@ public class platformer : MonoBehaviour
 
     void Move()
     {
-       float x = Input.GetAxisRaw("Horizontal");
-       float moveBy = x * speed;
+        float x = Input.GetAxisRaw("Horizontal");
+        float moveBy = rb.velocity.x + x * speed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
         
     }
