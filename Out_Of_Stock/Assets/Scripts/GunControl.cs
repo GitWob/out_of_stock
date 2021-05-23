@@ -57,6 +57,14 @@ public class GunControl : MonoBehaviour
     void FaceMouse()
     {
         gun.transform.eulerAngles = new Vector3(0, 0, angle);
+        if (direction.x < 0)
+        {
+            gun.GetComponent<SpriteRenderer>().flipY = true;
+        }
+        else
+        {
+            gun.GetComponent<SpriteRenderer>().flipY = false;
+        }
     }
 
     void Fire()
