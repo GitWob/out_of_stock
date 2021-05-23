@@ -20,6 +20,6 @@ public class bulletCount : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(40, 40, 100, 20), "Bullets left: " + playerGunControl.bulletCount);
+        GUI.Label(new Rect(40, 40, 100, 20), "Bullets left: " + playerGunControl.bulletCount,"black");
     }
 }
