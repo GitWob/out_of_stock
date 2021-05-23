@@ -26,12 +26,17 @@ public class GunControl : MonoBehaviour
     public float shellSpeed;
     public Transform shellPoint;
 
+    // gunshot sound
+    private AudioSource audioSource;
+    public AudioClip gunshotSound;
+
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
         gunFiring = gun.GetComponent<GunFiring>();
         shotTimer = 0;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -95,7 +100,13 @@ public class GunControl : MonoBehaviour
         GameObject bulletins = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
         bulletins.GetComponent<Rigidbody2D>().AddForce(bulletins.transform.right * bulletSpeed);
         Destroy(bulletins, lifeTime);
+
+        // Call for the Screen Shake
         ShotScreenShake.Instance.CamShake(4.5f, 0.1f);
+
+        // Calls for the audio
+        audioSource.volume = 0.50f;
+        audioSource.PlayOneShot(gunshotSound);
     }
 
     void shellRelease()
