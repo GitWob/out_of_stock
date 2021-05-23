@@ -247,6 +247,7 @@ MonoBehaviour:
   bullet: {fileID: 5719315711108176112, guid: 37fdbe3fcccebf64e816f5313730e261, type: 3}
   bulletSpeed: 1200
   shootPoint: {fileID: 3335413491796543014}
+  bulletCount: 10
   shell: {fileID: 36160703662051467, guid: b387ab1271b330444b337f66508afbe5, type: 3}
   shellSpeed: 1200
   shellPoint: {fileID: 5219727961702141730}

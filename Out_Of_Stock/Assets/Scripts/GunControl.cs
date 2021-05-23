@@ -19,6 +19,7 @@ public class GunControl : MonoBehaviour
     public GameObject bullet;
     public float bulletSpeed;
     public Transform shootPoint;
+    public float bulletCount;
 
     //shell release shtuff 
     public GameObject shell;
@@ -54,9 +55,13 @@ public class GunControl : MonoBehaviour
         {
             if (shotTimer > fireRate)
             {
-                Fire();
-                shellRelease();
-                shotTimer = 0;
+                if (bulletCount > 0)
+                {
+                    Fire();
+                    shellRelease();
+                    shotTimer = 0;
+                    bulletCount--;
+                }
             }
         }
 
