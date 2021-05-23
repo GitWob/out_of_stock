@@ -981,7 +981,7 @@ PrefabInstance:
     - target: {fileID: 3046965177431036799, guid: 683f2d0825b5ec6458685ab63cc2def5,
         type: 3}
       propertyPath: recoilForce
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3046965177431036799, guid: 683f2d0825b5ec6458685ab63cc2def5,
         type: 3}
