@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GunControl : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class GunControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        restart();
         // gets the position of the mouse
         mouseWorldPosition = cam.ScreenToWorldPoint(Input.mousePosition);
 
@@ -114,5 +116,14 @@ public class GunControl : MonoBehaviour
         GameObject shellIns = Instantiate(shell, shellPoint.position, shellPoint.rotation);
         shellIns.GetComponent<Rigidbody2D>().AddForce(shellIns.transform.up * shellSpeed);
         Destroy(shellIns, lifeTime);
+    }
+
+    void restart()
+    {
+        if (Input.GetKeyDown("r"))
+        {
+            SceneManager.LoadScene("Level 1");
+            bulletCount = 10;
+        }
     }
 }
