@@ -12,9 +12,10 @@ public class MainMenuController : MonoBehaviour
     {
         credits.SetActive(false);
     }
+
     public void playGame()
     {
-        SceneManager.LoadScene("WillScene");
+        SceneManager.LoadScene("Level 1");
     } 
 
     public void Credits()
@@ -32,5 +33,10 @@ public class MainMenuController : MonoBehaviour
     public void exitGame()
     {
         Application.Quit();
+    }
+
+    public void backToMain()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
