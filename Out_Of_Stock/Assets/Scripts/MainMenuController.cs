@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    public GameObject Main_Menu;
-    public GameObject credits;
 
     void Start()
     {
-        credits.SetActive(false);
-    }
 
+    }
     public void playGame()
     {
         SceneManager.LoadScene("Level 1");
@@ -20,14 +17,12 @@ public class MainMenuController : MonoBehaviour
 
     public void Credits()
     {
-        Main_Menu.SetActive(false);
-        credits.SetActive(true);
+        SceneManager.LoadScene("Credits");
     } 
 
     public void back()
     {
-        Main_Menu.SetActive(true);
-        credits.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void exitGame()
