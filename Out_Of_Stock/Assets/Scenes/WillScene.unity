@@ -885,6 +885,18 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3046965177431036792, guid: 683f2d0825b5ec6458685ab63cc2def5,
+        type: 3}
+      propertyPath: groundSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ad0855d33127d84e878ee39f1a0c8d6,
+        type: 3}
+    - target: {fileID: 3046965177431036792, guid: 683f2d0825b5ec6458685ab63cc2def5,
+        type: 3}
+      propertyPath: flyingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 98fe20a551d74d649bb21d8910607a6a,
+        type: 3}
     - target: {fileID: 3046965177431036795, guid: 683f2d0825b5ec6458685ab63cc2def5,
         type: 3}
       propertyPath: m_Name
