@@ -20,6 +20,11 @@ public class GunControl : MonoBehaviour
     public float bulletSpeed;
     public Transform shootPoint;
 
+    //shell release shtuff 
+    public GameObject shell;
+    public float shellSpeed;
+    public Transform shellPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +55,7 @@ public class GunControl : MonoBehaviour
             if (shotTimer > fireRate)
             {
                 Fire();
+                shellRelease();
                 shotTimer = 0;
             }
         }
@@ -85,5 +91,11 @@ public class GunControl : MonoBehaviour
         bulletins.GetComponent<Rigidbody2D>().AddForce(bulletins.transform.right * bulletSpeed);
 
         //ShotScreenShake.Instance.CamShake(3.5f, 0.1f);
+    }
+
+    void shellRelease()
+    {
+        GameObject shellIns = Instantiate(shell, shellPoint.position, shellPoint.rotation);
+        shellIns.GetComponent<Rigidbody2D>().AddForce(shellIns.transform.up * shellSpeed);
     }
 }
