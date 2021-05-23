@@ -690,6 +690,11 @@ PrefabInstance:
       propertyPath: recoilForce
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2540433967726781764, guid: 168e30fbcb553c54ca7c17df9edd52d3,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2540433967726781767, guid: 168e30fbcb553c54ca7c17df9edd52d3,
         type: 3}
       propertyPath: recoilForce
