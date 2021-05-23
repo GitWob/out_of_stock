@@ -6,6 +6,9 @@ public class platformer : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed;
+    public Sprite groundSprite;
+    public Sprite flyingSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +29,12 @@ public class platformer : MonoBehaviour
         {
             rb.velocity += new Vector2(moveBy, 0);
         }
+    }
+
+    bool IsGrounded()
+    {
+        float rayDistance = GetComponent<BoxCollider2D>().bounds.extents.y + 0.1f;
+        Physics2D.Raycast(GetComponent<BoxCollider2D>().bounds.center, Vector2.down, rayDistance);
+        return true;
     }
 }
