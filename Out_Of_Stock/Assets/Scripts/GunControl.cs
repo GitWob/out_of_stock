@@ -95,7 +95,7 @@ public class GunControl : MonoBehaviour
         GameObject bulletins = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
         bulletins.GetComponent<Rigidbody2D>().AddForce(bulletins.transform.right * bulletSpeed);
         Destroy(bulletins, lifeTime);
-        //ShotScreenShake.Instance.CamShake(3.5f, 0.1f);
+        ShotScreenShake.Instance.CamShake(4.5f, 0.1f);
     }
 
     void shellRelease()
