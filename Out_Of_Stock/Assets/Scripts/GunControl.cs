@@ -66,5 +66,6 @@ public class GunControl : MonoBehaviour
         //Debug.DrawLine(transform.position, transform.position + (Vector3)kickVector);
         Debug.DrawRay(transform.position, kickVector, Color.cyan, 1);
         GetComponent<Rigidbody2D>().AddForce(kickVector, ForceMode2D.Impulse);
+        ShotScreenShake.Instance.CamShake(3.5f, 0.1f);
     }
 }
