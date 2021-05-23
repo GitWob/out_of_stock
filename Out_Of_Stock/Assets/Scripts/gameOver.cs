@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gameOver : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class gameOver : MonoBehaviour
     {
         if (Collision())
         {
-            // game won! put level code here
+            SceneManager.LoadScene("gameOver");
         }
     }
 
