@@ -15,7 +15,7 @@ public class GunControl : MonoBehaviour
     private Vector3 mouseWorldPosition;
     private float shotTimer;
     private Vector2 kickVector;
-    float lifeTime = 1.0f; 
+    float lifeTime = 1.5f; 
     // bullet shooty stuff 
     public GameObject bullet;
     public float bulletSpeed;
