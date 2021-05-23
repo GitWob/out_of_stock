@@ -75,14 +75,15 @@ public class GunControl : MonoBehaviour
 
     void Fire()
     {
-        Debug.Log("X: " + kickVector.x);
-        Debug.Log("Y: " + kickVector.y);
+        Debug.Log("Blam!");
+        //Debug.Log("X: " + kickVector.x);
+        //Debug.Log("Y: " + kickVector.y);
         //Debug.DrawLine(transform.position, transform.position + (Vector3)kickVector);
-        Debug.DrawRay(transform.position, kickVector, Color.cyan, 1);
+        //Debug.DrawRay(transform.position, kickVector, Color.cyan, 1);
         GetComponent<Rigidbody2D>().AddForce(kickVector, ForceMode2D.Impulse);
-        ShotScreenShake.Instance.CamShake(3.5f, 0.1f);
-
         GameObject bulletins = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
         bulletins.GetComponent<Rigidbody2D>().AddForce(bulletins.transform.right * bulletSpeed);
+
+        //ShotScreenShake.Instance.CamShake(3.5f, 0.1f);
     }
 }
