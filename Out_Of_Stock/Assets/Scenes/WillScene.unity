@@ -121,37 +121,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &88359020 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3046965177431036795, guid: 683f2d0825b5ec6458685ab63cc2def5,
-    type: 3}
-  m_PrefabInstance: {fileID: 3046965177103380483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &88359021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88359020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea606c0c55551af4a94218430d872e4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerGunControl: {fileID: 88359024}
 --- !u!114 &88359024 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3046965177431036799, guid: 683f2d0825b5ec6458685ab63cc2def5,
     type: 3}
   m_PrefabInstance: {fileID: 3046965177103380483}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88359020}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64762cb2b6564c64ba69408404d4c791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &88359027 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3046965177431036798, guid: 683f2d0825b5ec6458685ab63cc2def5,
+    type: 3}
+  m_PrefabInstance: {fileID: 3046965177103380483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &335045502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3046965177431036797, guid: 683f2d0825b5ec6458685ab63cc2def5,
@@ -994,6 +981,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 98fe20a551d74d649bb21d8910607a6a,
         type: 3}
+    - target: {fileID: 3046965177431036792, guid: 683f2d0825b5ec6458685ab63cc2def5,
+        type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 88359027}
     - target: {fileID: 3046965177431036795, guid: 683f2d0825b5ec6458685ab63cc2def5,
         type: 3}
       propertyPath: m_Name
@@ -1092,5 +1084,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 98fe20a551d74d649bb21d8910607a6a,
         type: 3}
+    - target: {fileID: 9119820554358341406, guid: 683f2d0825b5ec6458685ab63cc2def5,
+        type: 3}
+      propertyPath: playerGunControl
+      value: 
+      objectReference: {fileID: 88359024}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683f2d0825b5ec6458685ab63cc2def5, type: 3}
